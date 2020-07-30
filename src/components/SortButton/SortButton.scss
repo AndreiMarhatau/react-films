@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.button{
+  color: white;
+  font-size: 22px;
+}
+
+.descending{
+  transform: rotate(45deg);
+}
+
+.ascending{
+  transform: rotate(-135deg);
+}
+
+.arrow{
+  border: solid red;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+}

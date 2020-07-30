@@ -1,0 +1,37 @@
+.container{
+  box-shadow: inset 0px 0px 500px rgba(0,0,0,1);
+  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/8502631a-7c16-4132-8656-d741da3b3d3e/fd3988e9-9e1a-436a-85cb-49d36b02093e/BY-en-20200727-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+}
+
+.formContainer{
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.label{
+  margin-bottom: 30px;
+}
+
+.netflix{
+  margin-left: 50px;
+}
+
+.addmovie{
+  margin-right: 30px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}

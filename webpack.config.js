@@ -17,7 +17,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
-            src: path.resolve(PATH.SRC)
+            src: path.resolve(PATH.SRC),
+            public: path.resolve(PATH.PUBLIC),
         }
     },
     module: {
@@ -33,7 +34,12 @@ module.exports = {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options:{
+                            modules: true
+                        }
+                    },
                     'sass-loader'
                 ],
                 exclude: [

@@ -1,0 +1,11 @@
+.count{
+  margin-bottom: 20px;
+}
+
+.movies{
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    margin: 30px;
+  }
+}

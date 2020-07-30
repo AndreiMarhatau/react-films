@@ -1,0 +1,44 @@
+.container{
+  width: 320px;
+  height: 550px;
+  color: gray;
+  position: relative;
+}
+
+.container:hover .settings{
+  visibility: visible;
+}
+
+.img{
+  height: 85%;
+  margin-bottom: 20px;
+}
+
+.nameYearWrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name{
+  font-size: 22px;
+}
+
+.year{
+  font-size: 20px;
+  border: solid 1px gray;
+  padding: 1px 10px;
+  border-radius: 3px;
+}
+
+.genre{
+  font-size: 18px;
+}
+
+.settings{
+  height: 30px;
+  position: absolute;
+  visibility: hidden;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}

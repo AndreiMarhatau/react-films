@@ -9,5 +9,6 @@ const PATH = {
   };
 
 module.exports = merge(common, {
-    devtool: 'source-map',
+  mode: 'development',
+  devtool: 'source-map',
 });
