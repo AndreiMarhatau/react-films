@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+.input{
+    padding: 1%;
+    background-color: #555555;
+    opacity: 0.8;
+    border: #555555;
+    border-radius: 5px;
+    font-size: 22px;
+    min-height: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.item{
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+}
+.item:hover{
+    background-color: #f65261;
+}
+.cross{
+  width: 25px;
+}
+.crossWrapper{
+  cursor: pointer;
+}
+.itemWrapper{
+    display: flex;
+    margin-right: 10px;
+}
+.arrow{
+    margin-left: auto;
+    margin-right: 10px;
+}

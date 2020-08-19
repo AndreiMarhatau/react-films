@@ -1,12 +1,11 @@
 .container{
   width: 320px;
   height: 550px;
-  color: gray;
+  color: #999999;
   position: relative;
 }
 
 .container:hover .settings{
-  visibility: visible;
 }
 
 .img{
@@ -25,7 +24,7 @@
 
 .year{
   font-size: 20px;
-  border: solid 1px gray;
+  border: solid 1px #555555;
   padding: 1px 10px;
   border-radius: 3px;
 }
@@ -35,10 +34,7 @@
 }
 
 .settings{
-  height: 30px;
   position: absolute;
-  visibility: hidden;
   right: 10px;
   top: 10px;
-  cursor: pointer;
 }

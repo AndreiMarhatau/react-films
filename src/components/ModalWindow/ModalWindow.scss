@@ -1,0 +1,34 @@
+.cross{
+  width: 50px;
+}
+.crossWrapper{
+  position: absolute;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.title{
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.buttons{
+  align-self: flex-end;
+  margin-top: 20px;
+  font-size: 22px;
+}
+.cancel{
+  color: #f65261;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 1px solid #f65261;
+  cursor: pointer;
+}
+.submit{
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #f65261;
+  margin-left: 50px;
+  cursor: pointer;
+}

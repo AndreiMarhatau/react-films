@@ -4,6 +4,8 @@ import NetFlixRoulette from '../../components/NetFlixRoulette/NetFlixRoulette';
 import AddMovieButton from '../../components/AddMovieButton/AddMovieButton';
 import SearchLabel from '../../components/SearchLabel/SearchLabel';
 import SearchForm from '../SearchForm/SearchForm';
+import { ModalContext } from '../../App';
+import ModalType from '../../utils/enums/ModalType';
 
 const SearchContainer = () => {
   return (
@@ -13,7 +15,9 @@ const SearchContainer = () => {
           <NetFlixRoulette/>
         </div>
         <div className={styles.addmovie}>
-          <AddMovieButton/>
+          <ModalContext.Consumer>
+            {({modalType, setModalType}) => <AddMovieButton clickHandler={() => { setModalType(ModalType.add); }}/>}
+          </ModalContext.Consumer>
         </div>
       </div>
       <div className={styles.formContainer}>

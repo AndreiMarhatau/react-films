@@ -1,0 +1,23 @@
+.settingsCard{
+  display: flex;
+  flex-direction: column;
+  width: 200%;
+  background-color: #424242;
+  border-radius: 5px;
+}
+.cross{
+  width: 20px;
+}
+.crossWrapper{
+  cursor: pointer;
+  align-self: flex-end;
+  right: -10px;
+}
+.option{
+  font-size: 22px;
+  color: white;
+  margin: 5px;
+}
+.option:hover{
+  background-color: #f65261;
+}

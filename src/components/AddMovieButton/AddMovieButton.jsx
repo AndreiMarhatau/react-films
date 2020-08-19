@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './AddMovieButton.scss';
+import PropTypes from 'prop-types';
 
-const AddMovieButton = () => {
-  return <div className={styles.addmovie}>+ ADD MOVIE</div>;
+const AddMovieButton = (props) => {
+  return <a className={styles.addmovie} onClick={props.clickHandler}>+ ADD MOVIE</a>;
 }
+
+AddMovieButton.propTypes = {
+  clickHandler: PropTypes.func,
+};
 
 export default AddMovieButton;
