@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Sort.scss';
 import SortButton from '../../components/SortButton/SortButton';
 
@@ -20,6 +20,10 @@ const Sort = () => {
     }
     e.preventDefault();
   }
+
+  useEffect(() => {
+    //Here will be action execution when active or descending states changes
+  }, [active, descending]);
 
     return <div className={styles.container}>
       <span className={styles.label}>SORT BY</span>
