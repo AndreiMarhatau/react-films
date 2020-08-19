@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './ModalContainer.scss';
 import ModalWindow from '../../components/ModalWindow/ModalWindow';
 import PropTypes from 'prop-types';
@@ -9,11 +9,9 @@ import Edit from './components/Edit/Edit';
 import Remove from './components/Remove/Remove';
 
 const ModalContainer = () => {
-  return <ModalContext.Consumer>
-    {({modalType, setModalType}) => {
-      return getModal(modalType, setModalType);
-    }}
-   </ModalContext.Consumer>;
+  const {modalType, setModalType} = useContext(ModalContext);
+  
+  return getModal(modalType, setModalType);
 }
 
 export default ModalContainer;

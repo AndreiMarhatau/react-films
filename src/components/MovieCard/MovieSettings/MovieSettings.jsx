@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styles from './MovieSettings.scss';
 import PropTypes from 'prop-types';
 import { ModalContext } from '../../../App';
@@ -8,6 +8,7 @@ import SettingsCard from './components/SettingsCard/SettingsCard';
 
 const MovieSettings = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {modalType, setModalType} = useContext(ModalContext);
 
   const handleClick = (e) => {
     setIsOpen(false);
@@ -15,7 +16,7 @@ const MovieSettings = () => {
   }
 
   return (
-    <ModalContext.Consumer>{({modalType, setModalType}) => <div className={styles.container}>
+    <div className={styles.container}>
       {!isOpen ? <SettingImg clickHandler={() => setIsOpen(true)}/>
       : <SettingsCard 
           crossClose={() => setIsOpen(false)} 
@@ -27,8 +28,7 @@ const MovieSettings = () => {
             setModalType(ModalType.remove);
             handleClick(e);
           }}/>}
-    </div>}
-    </ModalContext.Consumer>);
+    </div>)
 }
 
 export default MovieSettings;
