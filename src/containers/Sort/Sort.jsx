@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Sort.scss';
 import SortButton from '../../components/SortButton/SortButton';
+import usePreventHandler from '../../utils/hooks/usePreventHandler';
 
 const Sort = () => {
   const [active, setActive] = useState('RELEASE DATE');
   const [descending, setDescending] = useState(true);
 
-  const getActive = (text) => {
+  const getActive = useCallback((text) => {
     return text === active;
-  }
+  }, [active]);
 
-  const clickHandler = (e) => {
+  const clickHandler = usePreventHandler((e) => {
     if(e.target.text === active){
       setDescending(!descending);
     }
@@ -18,8 +19,7 @@ const Sort = () => {
       setDescending(true);
       setActive(e.target.text);
     }
-    e.preventDefault();
-  }
+  }, [descending, active]);
 
   useEffect(() => {
     //Here will be action execution when active or descending states changes

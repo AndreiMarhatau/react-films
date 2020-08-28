@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import styles from './Filter.scss';
 import FilterButton from '../../components/FilterButton/FilterButton';
+import usePreventHandler from '../../utils/hooks/usePreventHandler';
 
 const Filter = () => {
 
   const [active, setActive] = useState('ALL');
 
-  const handleClick = (e) => {
+  const handleClick = usePreventHandler((e) => {
     setActive(e.target.text);
-    e.preventDefault();
-  }
+  }, []);
 
-  const getActive = (text) => {
+  const getActive = useCallback((text) => {
     return text === active;
-  }
+  }, [active]);
 
 
     return <div className={styles.container}>

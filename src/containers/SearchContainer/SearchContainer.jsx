@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useCallback } from 'react';
 import styles from './SearchContainer.scss';
 import NetFlixRoulette from '../../components/NetFlixRoulette/NetFlixRoulette';
 import AddMovieButton from '../../components/AddMovieButton/AddMovieButton';
@@ -10,6 +10,8 @@ import ModalType from '../../utils/enums/ModalType';
 const SearchContainer = () => {
   const {modalType, setModalType} = useContext(ModalContext);
 
+  const setAdd = useCallback(() => { setModalType(ModalType.add); }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -17,7 +19,7 @@ const SearchContainer = () => {
           <NetFlixRoulette/>
         </div>
         <div className={styles.addmovie}>
-          <AddMovieButton clickHandler={() => { setModalType(ModalType.add); }}/>
+          <AddMovieButton clickHandler={setAdd}/>
         </div>
       </div>
       <div className={styles.formContainer}>

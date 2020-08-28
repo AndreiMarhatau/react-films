@@ -1,0 +1,42 @@
+.container{
+  display: flex;
+  color: white;
+}
+.img{
+  min-height: 400px;
+}
+.detailsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+.titleContainer{
+  font-size: 44px;
+}
+.title{
+  margin-right: 20px;
+}
+.voteAverage{
+  color: greenyellow;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 13px;
+}
+.tagline{
+  font-size: 18px;
+}
+.releaseAndRuntime{
+  font-size:32px;
+  color: #f65261;
+}
+.release{
+  margin-right: 30px;
+}
+.runtime{
+
+}
+.description{
+  font-size: 22px;
+}
