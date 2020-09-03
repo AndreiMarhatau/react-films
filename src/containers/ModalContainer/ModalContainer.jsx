@@ -7,11 +7,15 @@ import ModalType from '../../utils/enums/ModalType';
 import Add from './components/Add/Add';
 import Edit from './components/Edit/Edit';
 import Remove from './components/Remove/Remove';
+import { useSelector, useDispatch } from 'react-redux';
+import modalTypeSelector from '../../selectors/modal-type.selector';
+import { setModalType } from '../../actions/modal-type.action';
 
 const ModalContainer = () => {
-  const {modalType, setModalType} = useContext(ModalContext);
+  const dispatch = useDispatch();
+  const modalType = useSelector(modalTypeSelector);
 
-  const close = useCallback(() => setModalType(ModalType.none), []);
+  const close = useCallback(() => dispatch(setModalType(ModalType.none)), []);
   const getModalCallback = useCallback((modalType, setModalType) => getModal(modalType, setModalType), [modalType]);
   
   return getModalCallback(modalType, close);

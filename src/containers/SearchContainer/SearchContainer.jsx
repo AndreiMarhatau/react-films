@@ -1,16 +1,17 @@
-import React, { useContext, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import styles from './SearchContainer.scss';
 import NetFlixRoulette from '../../components/NetFlixRoulette/NetFlixRoulette';
 import AddMovieButton from '../../components/AddMovieButton/AddMovieButton';
 import SearchLabel from '../../components/SearchLabel/SearchLabel';
 import SearchForm from '../SearchForm/SearchForm';
-import { ModalContext } from '../../App';
 import ModalType from '../../utils/enums/ModalType';
+import { useDispatch } from 'react-redux';
+import { setModalType } from '../../actions/modal-type.action';
 
 const SearchContainer = () => {
-  const {modalType, setModalType} = useContext(ModalContext);
+  const dispatch = useDispatch();
 
-  const setAdd = useCallback(() => { setModalType(ModalType.add); }, []);
+  const setAdd = useCallback(() => { dispatch(setModalType(ModalType.add)); }, []);
 
   return (
     <div className={styles.container}>

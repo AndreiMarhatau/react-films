@@ -1,25 +1,26 @@
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import styles from './MovieSettings.scss';
 import PropTypes from 'prop-types';
-import { ModalContext } from '../../../App';
 import ModalType from '../../../utils/enums/ModalType';
 import SettingImg from './components/SettingImg/SettingImg';
 import SettingsCard from './components/SettingsCard/SettingsCard';
 import usePreventHandler from '../../../utils/hooks/usePreventHandler';
+import { useDispatch } from 'react-redux';
+import { setModalType } from '../../../actions/modal-type.action';
 
 const MovieSettings = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {modalType, setModalType} = useContext(ModalContext);
+  const dispatch = useDispatch();
 
   const setOpen = useCallback(() => setIsOpen(true), []);
 
   const editClick = usePreventHandler(() => {
-    setModalType(ModalType.edit);
+    dispatch(setModalType(ModalType.edit));
     setIsOpen(false);
   }, []);
 
   const deleteClick = usePreventHandler(() => {
-    setModalType(ModalType.remove);
+    dispatch(setModalType(ModalType.remove));
     setIsOpen(false);
   }, []);
 

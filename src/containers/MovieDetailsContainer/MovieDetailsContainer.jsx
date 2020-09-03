@@ -2,20 +2,19 @@ import React, { useContext, useEffect, useState, useCallback } from 'react';
 import styles from './MovieDetailsContainer.scss';
 import NetFlixRoulette from '../../components/NetFlixRoulette/NetFlixRoulette';
 import GoToSearchButton from '../../components/GoToSearchButton/GoToSearchButton';
-import { MovieDetails } from '../../App';
-import consts from '../../constants/consts';
 import MovieDetail from '../../components/MovieDetail/MovieDetail';
 import usePreventHandler from '../../utils/hooks/usePreventHandler';
+import { useDispatch, useSelector } from 'react-redux';
+import movieDetailsSelector from '../../selectors/movie-details-page.selector';
+import { setMovieDetails } from '../../actions/movie-details-page.action';
+import movieSelector from '../../selectors/movie.selector';
 
 const MovieDetailsContainer = () => {
-  const {movieDetails, setMovieDetails} = useContext(MovieDetails);
-  const [movie, setMovie] = useState({});
+  const dispatch = useDispatch();
+  const movieDetails = useSelector(movieDetailsSelector);
+  const movie = useSelector(movieSelector(movieDetails));
 
-  const closeDetails = usePreventHandler(() =>{ setMovieDetails(null); }, []);
-
-  useEffect(() => {
-    setMovie(consts.movies.find(item => item.id === movieDetails));
-  }, [movieDetails]);
+  const closeDetails = usePreventHandler(() =>{ dispatch(setMovieDetails(null)); }, []);
 
   return (
     <div className={styles.container}>

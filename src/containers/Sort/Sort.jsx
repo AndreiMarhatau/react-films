@@ -2,10 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Sort.scss';
 import SortButton from '../../components/SortButton/SortButton';
 import usePreventHandler from '../../utils/hooks/usePreventHandler';
+import { useDispatch } from 'react-redux';
+import { setSort } from '../../actions/search-data.action';
 
 const Sort = () => {
   const [active, setActive] = useState('RELEASE DATE');
   const [descending, setDescending] = useState(true);
+  const dispatch = useDispatch();
 
   const getActive = useCallback((text) => {
     return text === active;
@@ -22,12 +25,15 @@ const Sort = () => {
   }, [descending, active]);
 
   useEffect(() => {
-    //Here will be action execution when active or descending states changes
+    let sortBy = active === 'RELEASE DATE' ? 'release_date' : active === 'GENRE' ? 'genres' : active === 'RATING' ? 'vote_average' : '';
+    dispatch(setSort(sortBy, descending ? 'desc' : 'asc'));
   }, [active, descending]);
 
     return <div className={styles.container}>
       <span className={styles.label}>SORT BY</span>
       <SortButton isActive={getActive('RELEASE DATE')} text='RELEASE DATE' descending={descending} clickHandler={clickHandler}/>
+      <SortButton isActive={getActive('GENRE')} text='GENRE' descending={descending} clickHandler={clickHandler}/>
+      <SortButton isActive={getActive('RATING')} text='RATING' descending={descending} clickHandler={clickHandler}/>
     </div>;
 }
 

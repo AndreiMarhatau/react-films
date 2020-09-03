@@ -1,4 +1,5 @@
 export default Object.freeze({
+  apiUrl: 'http://localhost:4000',
   genres: ['DOCUMENTARY',
     'COMEDY',
     'HORROR',

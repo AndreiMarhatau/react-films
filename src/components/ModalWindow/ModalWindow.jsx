@@ -1,14 +1,15 @@
-import React, { useContext, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import styles from './ModalWindow.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ModalType from '../../utils/enums/ModalType';
-import { ModalContext } from '../../App';
+import { setModalType } from '../../actions/modal-type.action';
+import { useDispatch } from 'react-redux';
 
 const ModalWindow = (props) => {
-  const {modalType, setModalType} = useContext(ModalContext);
+  const dispatch = useDispatch();
 
-  const closeHandler = useCallback(() => {setModalType(ModalType.none); props.cancelHandler();}, [props.cancelHandler]);
+  const closeHandler = useCallback(() => {dispatch(setModalType(ModalType.none)); props.cancelHandler();}, [props.cancelHandler]);
 
     return (
         <>
