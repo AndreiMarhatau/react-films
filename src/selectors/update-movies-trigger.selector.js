@@ -1,5 +1,5 @@
 const { createSelector } = require("reselect");
 
-const updateMoviesTriggerSelector = createSelector(state => state.updateMoviesTrigger, trigger => trigger);
+export const updateMoviesTriggerSelector = createSelector(state => state.updateMoviesTrigger, trigger => trigger.trigger);
 
-export default updateMoviesTriggerSelector;
+export const updateMoviesStatusSelector = createSelector(state => state.updateMoviesTrigger, trigger => trigger.status);

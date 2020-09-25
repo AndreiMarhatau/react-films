@@ -1,5 +1,5 @@
 const { createSelector } = require("reselect");
 
-const modalTypeSelector = createSelector(state => state.modalType, modalType => modalType);
+export const modalTypeSelector = createSelector(state => state.modalType, modalType => modalType.type);
 
-export default modalTypeSelector;
+export const modalIdSelector = createSelector(state => state.modalType, modalType => modalType.id);

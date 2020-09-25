@@ -5,12 +5,12 @@ const { setModalTypeAction } = require("../actions/modal-type.action");
 const modalTypeReducer = handleActions({
   [`${setModalTypeAction}`]: (state, {payload}) => {
     for(var key in ModalType){
-      if(ModalType[key] === payload){
+      if(ModalType[key] === payload.type){
         return payload;
       }
     }
     return state;
   }
-}, ModalType.none);
+}, {type: ModalType.none, id: null});
 
 export default modalTypeReducer;

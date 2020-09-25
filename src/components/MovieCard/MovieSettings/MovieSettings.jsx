@@ -8,19 +8,19 @@ import usePreventHandler from '../../../utils/hooks/usePreventHandler';
 import { useDispatch } from 'react-redux';
 import { setModalType } from '../../../actions/modal-type.action';
 
-const MovieSettings = () => {
+const MovieSettings = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
 
   const setOpen = useCallback(() => setIsOpen(true), []);
 
   const editClick = usePreventHandler(() => {
-    dispatch(setModalType(ModalType.edit));
+    dispatch(setModalType(ModalType.edit, props.id));
     setIsOpen(false);
   }, []);
 
   const deleteClick = usePreventHandler(() => {
-    dispatch(setModalType(ModalType.remove));
+    dispatch(setModalType(ModalType.remove, props.id));
     setIsOpen(false);
   }, []);
 
@@ -32,6 +32,10 @@ const MovieSettings = () => {
           editClick={editClick}
           deleteClick={deleteClick}/>}
     </div>)
+}
+
+MovieSettings.propTypes = {
+  id: PropTypes.number,
 }
 
 export default MovieSettings;

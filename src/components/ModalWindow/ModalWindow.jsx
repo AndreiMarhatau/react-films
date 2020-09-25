@@ -16,8 +16,8 @@ const ModalWindow = (props) => {
           <span className={styles.title}>{props.title}</span>
           {props.children}
           <div className={styles.buttons}>
-            <a className={styles.cancel}>RESET</a>
-            <a className={styles.submit}>SUBMIT</a>
+            <a onClick={props.cancelHandler} className={styles.cancel}>RESET</a>
+            <button type='submit' className={styles.submit} disabled={props.isSubmitting}>SUBMIT</button>
           </div>
           <div className={styles.crossWrapper}>
             <img className={styles.cross} src='http://s1.iconbird.com/ico/0612/vistabasesoftwareicons/w256h2561339252558DeleteRed.png' 
@@ -30,8 +30,8 @@ const ModalWindow = (props) => {
 ModalWindow.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
-  submitHandler: PropTypes.func,
   cancelHandler: PropTypes.func,
+  isSubmitting: PropTypes.bool,
 };
 
 export default ModalWindow;

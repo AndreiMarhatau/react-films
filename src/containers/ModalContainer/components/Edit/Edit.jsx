@@ -1,56 +1,84 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import styles from './Edit.scss';
 import sharedStyles from '../Shared.scss';
 import PropTypes from 'prop-types';
 import ModalWindow from '../../../../components/ModalWindow/ModalWindow';
-import Consts from '../../../../constants/consts';
+import Consts from '../../../../constants/consts'
 import Dropdown from '../../../../components/Dropdown/Dropdown';
+import useModalFormikData from '../../../../utils/hooks/useModalFormikData';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateMovie } from '../../../../actions/update-movie.action';
+import { ErrorMessage, Formik, useFormik } from 'formik';
+import movieSelector from '../../../../selectors/movie.selector';
+import { updateMoviesStatusSelector } from '../../../../selectors/update-movies-trigger.selector';
 
 const Edit = (props) => {
-  const [title, setTitle] = useState('');
-  const [releaseDate, setReleaseDate] = useState();
-  const [movieUrl, setMovieUrl] = useState('');
-  const [genre, setGenre] = useState([]);
-  const [overview, setOverview] = useState('');
-  const [runtime, setRuntime] = useState('');
+  const dispatch = useDispatch();
 
-  const titleChanged = useCallback((e) => setTitle(e.target.value), []);
-  const releaseChanged = useCallback((e) => setReleaseDate(e.target.value), []);
-  const movieUrlChanged = useCallback((e) => setMovieUrl(e.target.value), []);
-  const genreChanged = useCallback((selected) => setGenre(selected), []);
-  const overviewChanged = useCallback((e) => setOverview(e.target.value), []);
-  const runtimeChanged = useCallback((e) => setRuntime(e.target.value), []);
+  const status = useSelector(updateMoviesStatusSelector);
 
-  return <div className={sharedStyles.wrapper}>
-    <div className={sharedStyles.modalWrapper}>
-      <ModalWindow title='EDIT MOVIE' submitHandler={() => {}} cancelHandler={props.close}>
+  const movie = useSelector(movieSelector(props.id));
+
+  const formikData = useModalFormikData(movie);
+
+  const onSubmit = useCallback((values) => {
+    dispatch(updateMovie({
+      id: props.id,
+      title: values.title,
+      release_date: values.release_date,
+      poster_path: values.poster_path,
+      genres: values.genres,
+      overview: values.overview,
+      runtime: +values.runtime,
+    }));
+  }, [props.id]);
+
+  const formik = useFormik({
+    validate: formikData.validate,
+    initialValues: formikData.initialValues,
+    onSubmit: onSubmit,
+  });
+
+  return (
+    <div className={sharedStyles.wrapper}>
+      <form className={sharedStyles.modalWrapper} onSubmit={formik.handleSubmit}>
+        <ModalWindow title='ADD MOVIE' isSubmitting={formik.isSubmitting} cancelHandler={props.close}>
           <span className={sharedStyles.label}>MOVIE ID</span>
-          <span className={styles.label}>MOCKID123</span>
+          <span className={styles.label}>{props.id}</span>
 
           <span className={sharedStyles.label}>TITLE</span>
-          <input value={title} className={sharedStyles.input} onChange={titleChanged}/>
+          <input name='title' value={formik.values.title} className={sharedStyles.input} onChange={formik.handleChange} />
+          <div className={sharedStyles.error}>{formik.errors.title}</div>
 
           <span className={sharedStyles.label}>RELEASE DATE</span>
-          <input type='date' value={releaseDate} className={sharedStyles.input} onChange={releaseChanged}/>
+          <input name='release_date' type='date' value={formik.values.release_date} className={sharedStyles.input} onChange={formik.handleChange} />
+          <div className={sharedStyles.error}>{formik.errors.release_date}</div>
 
           <span className={sharedStyles.label}>MOVIE URL</span>
-          <input value={movieUrl} className={sharedStyles.input} onChange={movieUrlChanged}/>
-          
+          <input name='poster_path' value={formik.values.poster_path} className={sharedStyles.input} onChange={formik.handleChange} />
+          <div className={sharedStyles.error}>{formik.errors.poster_path}</div>
+
           <span className={sharedStyles.label}>GENRE</span>
-          <Dropdown items={Consts.genres} selected={genre} onChange={genreChanged}/>
-          
+          <Dropdown name='genres' items={Consts.genres} selected={formik.values.genres} onChange={formik.handleChange} />
+          <div className={sharedStyles.error}>{formik.errors.genres}</div>
+
           <span className={sharedStyles.label}>OVERVIEW</span>
-          <input value={overview} className={sharedStyles.input} onChange={overviewChanged}/>
-          
+          <input name='overview' value={formik.values.overview} className={sharedStyles.input} onChange={formik.handleChange} />
+          <div className={sharedStyles.error}>{formik.errors.overview}</div>
+
           <span className={sharedStyles.label}>RUNTIME</span>
-          <input value={runtime} className={sharedStyles.input} onChange={runtimeChanged}/>
-      </ModalWindow>
-    </div>
-  </div> 
+          <input name='runtime' value={formik.values.runtime} className={sharedStyles.input} onChange={formik.handleChange} />
+          <div className={sharedStyles.error}>{formik.errors.runtime}</div>
+
+          {status !== 200 && status !== null && <div className={sharedStyles.error}>Something went wrong.</div>}
+        </ModalWindow>
+      </form>
+    </div>);
 }
 
 Edit.propTypes = {
   close: PropTypes.func,
+  id: PropTypes.number,
 }
 
 export default Edit;

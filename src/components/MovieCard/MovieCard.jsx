@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MovieSettings from './MovieSettings/MovieSettings';
 import ModalType from '../../utils/enums/ModalType';
 import { useSelector } from 'react-redux';
-import modalTypeSelector from '../../selectors/modal-type.selector';
+import { modalTypeSelector } from '../../selectors/modal-type.selector';
 import PosterImg from '../PosterImg/PosterImg';
 
 const MovieCard = (props) => {
@@ -25,7 +25,7 @@ const MovieCard = (props) => {
         </div>
         <span className={styles.genre}>{props.movie.genres.join(', ')}</span>
         {hover && <div className={styles.settings}>
-          <MovieSettings/>
+          <MovieSettings id={props.movie.id}/>
         </div>}
       </div>;
 }

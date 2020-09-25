@@ -5,17 +5,20 @@ import Arrow from '../Arrow/Arrow';
 import usePreventHandler from '../../utils/hooks/usePreventHandler';
 
 const Dropdown = (props) => {
-  const [selected, setSelected] = useState(props.selected);
+  const { selected } = props;
   const [isOpen, setIsOpen] = useState(false);
 
+  const wrapValueToEvent = (e) => {
+    e = {target: {value: e, name: props.name}};
+    return e;
+  };
+
   const selectOne = usePreventHandler((e) => {
-    setSelected(selected.concat(e.target.text));
-    props.onChange && props.onChange(selected);
+    props.onChange && props.onChange(wrapValueToEvent(selected.concat(e.target.text)));
   }, [selected, props.onChange]);
 
   const deleteOne = useCallback((item) => {
-    setSelected(selected.filter(selectedItem => selectedItem !== item));
-    props.onChange && props.onChange(selected);
+    props.onChange && props.onChange(wrapValueToEvent(selected.filter(selectedItem => selectedItem !== item)));
   }, [selected, props.onChange]);
 
   const setOpen = useCallback((e) => {
@@ -53,6 +56,7 @@ Dropdown.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func,
   selected: PropTypes.arrayOf(PropTypes.string),
+  name: PropTypes.string,
 };
 
 export default Dropdown;
