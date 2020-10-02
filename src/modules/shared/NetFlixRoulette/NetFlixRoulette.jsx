@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Routes } from '../../../router/routes';
 import styles from './NetFlixRoulette.scss';
 
 const NetFlixRoulette = () => {
-  return <a href='' className={styles.text}>
+  return <Link to={Routes.main.path} className={styles.text}>
       <span className={styles.bold}>netflix</span><span>roulette</span>
-    </a>;
+    </Link>;
 }
 
 export default NetFlixRoulette;

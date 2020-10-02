@@ -6,6 +6,8 @@ import ModalType from '../../../../utils/enums/ModalType';
 import { useSelector } from 'react-redux';
 import { modalTypeSelector } from '../../../../selectors/modal-type.selector';
 import PosterImg from '../../../shared/PosterImg/PosterImg';
+import { Link } from 'react-router-dom';
+import { Routes } from '../../../../router/routes';
 
 const MovieCard = (props) => {
   const [hover, setHover] = useState(false);
@@ -16,9 +18,9 @@ const MovieCard = (props) => {
   }
 
     return <div className={styles.container} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-        <a href='#' onClick={props.onClick}>
+        <Link to={`${Routes.details.basePath}${props.movie.id}`}>
           <PosterImg className={styles.img} src={props.movie.poster_path} alt={props.movie.title}/>
-        </a>
+        </Link>
         <div className={styles.nameYearWrapper}>
           <span className={styles.name}>{props.movie.title}</span>
           <span className={styles.year}>{props.movie.release_date}</span>
@@ -45,7 +47,6 @@ MovieCard.propTypes = {
     budget: PropTypes.number,
     revenue: PropTypes.number,
   }),
-  onClick: PropTypes.func
 }
 
 export default MovieCard;

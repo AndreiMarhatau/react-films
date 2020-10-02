@@ -9,24 +9,26 @@ import moviesCountSelector from '../../../../selectors/movies-count.selector';
 import moviesDataSelector from '../../../../selectors/movies-data.selector';
 import { getMoviesList } from '../../../../actions/movies-list.action';
 import useMoviesUpdater from '../../../../utils/hooks/useMoviesUpdater';
+import MoviesNotFound from '../../components/MoviesNotFound/MoviesNotFound';
 
 const MoviesContainer = () => {
   //Here will be selectors when we use redux
   const count = useSelector(moviesCountSelector);
   const movies = useSelector(moviesDataSelector);
-  const dispatch = useDispatch();
 
-  const moviesMap = useMemo(() => 
-    movies.map(movie => <MovieCard onClick={() => { dispatch(setMovieDetails(movie.id)); }} key={movie.id} movie={movie}/>), [movies]);
+  const moviesMap = useMemo(() =>
+    movies.map(movie => <MovieCard key={movie.id} movie={movie} />), [movies]);
 
   useMoviesUpdater();
-
-    return <div>
-      <div className={styles.count}><MoviesCount count={count}/></div>
-      <div className={styles.movies}>
-        {moviesMap}
-      </div>
-    </div>;
+  if(count === 0){
+    return <MoviesNotFound/>;
+  }
+  return <div>
+    <div className={styles.count}><MoviesCount count={count} /></div>
+    <div className={styles.movies}>
+      {moviesMap}
+    </div>
+  </div>;
 }
 
 export default MoviesContainer;

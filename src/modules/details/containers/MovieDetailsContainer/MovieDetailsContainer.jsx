@@ -8,19 +8,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import movieDetailsSelector from '../../../../selectors/movie-details-page.selector';
 import { setMovieDetails } from '../../../../actions/movie-details-page.action';
 import movieSelector from '../../../../selectors/movie.selector';
+import { useHistory, useParams } from 'react-router';
 
 const MovieDetailsContainer = () => {
+  const { id } = useParams();
+  const movie = useSelector(movieDetailsSelector);
   const dispatch = useDispatch();
-  const movieDetails = useSelector(movieDetailsSelector);
-  const movie = useSelector(movieSelector(movieDetails));
+  const history = useHistory();
 
-  const closeDetails = usePreventHandler(() =>{ dispatch(setMovieDetails(null)); }, []);
+  useEffect(() => {
+    dispatch(setMovieDetails(id));
+  }, [id]);
+
+  const onClick = usePreventHandler(() => {
+    history.goBack();
+  }, [history]);
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <NetFlixRoulette/>
-        <GoToSearchButton onClick={closeDetails}/>
+        <GoToSearchButton onClick={onClick} />
       </div>
       <div className={styles.detail}>
         <MovieDetail movie={movie}/>

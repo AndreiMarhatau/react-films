@@ -70,5 +70,10 @@ module.exports = {
             }
             : undefined
         ),
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+        compress: true,
+        port: 8081
+      }
 }

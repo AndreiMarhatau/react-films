@@ -20,7 +20,6 @@ const useMoviesUpdater = () => {
   const trigger = useSelector(updateMoviesTriggerSelector);
 
   useEffect(() => {
-    dispatch(setMovieDetails(null));
     dispatch(setModalType(ModalType.none));
     dispatch(getMoviesList(sortBy, sortOrder, search, searchBy, filter, offset, limit));
   }, [sortBy, sortOrder, search, searchBy, filter, offset, limit, trigger]);
