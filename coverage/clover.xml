@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1602234310971" clover="3.2.0">
+  <project timestamp="1602234310971" name="All files">
+    <metrics statements="25" coveredstatements="16" conditionals="15" coveredconditionals="2" methods="13" coveredmethods="6" elements="53" coveredelements="24" complexity="0" loc="25" ncloc="25" packages="6" files="9" classes="9"/>
+    <package name="actions">
+      <metrics statements="11" coveredstatements="7" conditionals="7" coveredconditionals="0" methods="8" coveredmethods="4"/>
+      <file name="movie-details-page.action.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\actions\movie-details-page.action.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="movies-list.action.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\actions\movies-list.action.js">
+        <metrics statements="5" coveredstatements="1" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="constants">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="consts.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\constants\consts.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="modules.movie-list.components.FilterButton">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="FilterButton.jsx" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\modules\movie-list\components\FilterButton\FilterButton.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="reducers">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="movie-details-page.reducer.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\reducers\movie-details-page.reducer.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="movies-list.reducer.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\reducers\movies-list.reducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils.enums">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="SearchBy.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\utils\enums\SearchBy.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="SortOrder.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\utils\enums\SortOrder.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="utils.services.urlDataBuilder">
+      <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="urlDataBuilder.js" path="C:\Users\Andr1o\Desktop\react-learn\react-films\src\utils\services\urlDataBuilder\urlDataBuilder.js">
+        <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+  </project>
+</coverage>

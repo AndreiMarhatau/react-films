@@ -3,17 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --coverage",
     "start": "cross-env NODE_ENV=development && webpack-dev-server --mode=development --config webpack.dev.js",
     "build:dev": "cross-env NODE_ENV=development && webpack --mode=development --config webpack.dev.js",
     "build:prod": "cross-env NODE_ENV=development && webpack --mode=production --config webpack.prod.js",
     "build:dev:watch": "cross-env NODE_ENV=development && webpack --mode=development --config webpack.dev.js --watch"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    }
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@testing-library/react": "^11.0.4",
+    "babel-jest": "^26.5.2",
     "classnames": "^2.2.6",
     "formik": "^2.1.5",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -21,6 +29,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0"
   },
