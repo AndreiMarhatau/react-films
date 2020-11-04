@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Arrow.scss';
+import styles from './Arrow.module.scss';
 import classNames from 'classnames';
 
 const Arrow = props => {

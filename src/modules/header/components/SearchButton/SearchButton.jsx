@@ -1,11 +1,10 @@
 import React from 'react';
-import styles from './SearchButton.scss';
+import styles from './SearchButton.module.scss';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { Routes } from '../../../../router/routes';
 
 const SearchButton = (props) => {
-  return <Link to={`${Routes.search.basePath}${props.query}`} onClick={props.onClick} className={styles.button}>SEARCH</Link>;
+  return <a href={`${Routes.search.basePath}${props.query}`} onClick={props.onClick} className={styles.button}>SEARCH</a>;
 }
 
 SearchButton.propTypes = {

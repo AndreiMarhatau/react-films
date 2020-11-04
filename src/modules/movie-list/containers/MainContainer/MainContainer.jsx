@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MainContainer.scss';
+import styles from './MainContainer.module.scss';
 import FilterSortContainer from '../FilterSortContainer/FilterSortContainer';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 

@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import styles from './Filter.scss';
+import styles from './Filter.module.scss';
 import FilterButton from '../../components/FilterButton/FilterButton';
 import usePreventHandler from '../../../../utils/hooks/usePreventHandler';
 import { useDispatch } from 'react-redux';

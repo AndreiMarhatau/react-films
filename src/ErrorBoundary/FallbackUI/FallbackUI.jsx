@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FallbackUI.scss';
+import styles from './FallbackUI.module.scss';
 
 const FallbackUI = () => {
   return <span className={styles.span}>

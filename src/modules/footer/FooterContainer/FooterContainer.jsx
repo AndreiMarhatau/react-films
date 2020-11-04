@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FooterContainer.scss';
+import styles from './FooterContainer.module.scss';
 import NetFlixRoulette from '../../shared/NetFlixRoulette/NetFlixRoulette';
 
 const FooterContainer = () => {

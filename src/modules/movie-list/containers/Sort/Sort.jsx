@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import styles from './Sort.scss';
+import styles from './Sort.module.scss';
 import SortButton from '../../components/SortButton/SortButton';
 import usePreventHandler from '../../../../utils/hooks/usePreventHandler';
 import { useDispatch } from 'react-redux';

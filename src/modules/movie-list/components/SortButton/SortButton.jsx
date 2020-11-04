@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SortButton.scss';
+import styles from './SortButton.module.scss';
 import PropTypes from 'prop-types';
 import Arrow from '../../../shared/Arrow/Arrow';
 

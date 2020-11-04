@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FilterSortContainer.scss';
+import styles from './FilterSortContainer.module.scss';
 import Filter from '../Filter/Filter';
 import Sort from '../Sort/Sort';
 

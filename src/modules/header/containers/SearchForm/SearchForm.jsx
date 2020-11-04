@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import styles from './SearchForm.scss';
+import styles from './SearchForm.module.scss';
 import SearchInput from '../../components/SearchInput/SearchInput';
 import SearchButton from '../../components/SearchButton/SearchButton';
 

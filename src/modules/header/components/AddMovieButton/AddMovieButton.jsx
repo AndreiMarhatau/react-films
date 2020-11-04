@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AddMovieButton.scss';
+import styles from './AddMovieButton.module.scss';
 import PropTypes from 'prop-types';
 
 const AddMovieButton = (props) => {

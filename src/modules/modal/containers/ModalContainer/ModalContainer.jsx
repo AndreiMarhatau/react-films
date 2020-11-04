@@ -1,5 +1,4 @@
 import React, { useContext, useCallback } from 'react';
-import styles from './ModalContainer.scss';
 import ModalWindow from '../../components/ModalWindow/ModalWindow';
 import PropTypes from 'prop-types';
 import { ModalContext } from '../../../../App';

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MoviesNotFound.scss';
+import styles from './MoviesNotFound.module.scss';
 
 const MoviesNotFound = () => {
   return <span className={styles.span}>

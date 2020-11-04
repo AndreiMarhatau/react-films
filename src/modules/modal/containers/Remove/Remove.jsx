@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import styles from './Remove.scss';
-import sharedStyles from '../Shared.scss';
+import sharedStyles from '../Shared.module.scss';
 import PropTypes from 'prop-types';
 import ModalWindow from '../../components/ModalWindow/ModalWindow';
 import { useDispatch } from 'react-redux';

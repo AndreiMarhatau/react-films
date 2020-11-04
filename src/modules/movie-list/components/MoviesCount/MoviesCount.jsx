@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MoviesCount.scss';
+import styles from './MoviesCount.module.scss';
 import PropTypes from 'prop-types';
 
 const MoviesCount = (props) => {

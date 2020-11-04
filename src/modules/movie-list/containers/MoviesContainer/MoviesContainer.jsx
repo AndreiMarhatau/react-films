@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, useCallback, useMemo } from 'react';
-import styles from './MoviesContainer.scss';
+import styles from './MoviesContainer.module.scss';
 import MoviesCount from '../../components/MoviesCount/MoviesCount';
 import MovieCard from '../MovieCard/MovieCard';
 import consts from '../../../../constants/consts';

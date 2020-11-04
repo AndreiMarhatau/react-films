@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FilterButton.scss';
+import styles from './FilterButton.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 

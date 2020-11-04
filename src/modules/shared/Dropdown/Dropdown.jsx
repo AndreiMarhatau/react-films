@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import styles from './Dropdown.scss';
+import styles from './Dropdown.module.scss';
 import PropTypes from 'prop-types';
 import Arrow from '../Arrow/Arrow';
 import usePreventHandler from '../../../utils/hooks/usePreventHandler';

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import styles from './Edit.scss';
-import sharedStyles from '../Shared.scss';
+import styles from './Edit.module.scss';
+import sharedStyles from '../Shared.module.scss';
 import PropTypes from 'prop-types';
 import ModalWindow from '../../components/ModalWindow/ModalWindow';
 import Consts from '../../../../constants/consts'

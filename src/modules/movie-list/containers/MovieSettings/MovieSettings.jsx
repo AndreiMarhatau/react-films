@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import styles from './MovieSettings.scss';
 import PropTypes from 'prop-types';
 import ModalType from '../../../../utils/enums/ModalType';
 import SettingImg from '../../components/SettingImg/SettingImg';
@@ -25,7 +24,7 @@ const MovieSettings = (props) => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
       {!isOpen ? <SettingImg clickHandler={setOpen}/>
       : <SettingsCard 
           crossClose={() => setIsOpen(false)} 

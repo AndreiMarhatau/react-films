@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MovieDetail.scss';
+import styles from './MovieDetail.module.scss';
 import PropTypes from 'prop-types';
 import PosterImg from '../../../shared/PosterImg/PosterImg';
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NetFlixRoulette from '../../modules/shared/NetFlixRoulette/NetFlixRoulette';
 import { Routes } from '../routes';
-import styles from './NotFound.scss';
+import styles from './NotFound.module.scss';
 
 const NotFound = () => {
   return (
@@ -18,9 +17,9 @@ const NotFound = () => {
     <span className={styles.number}>
       404
     </span>
-    <Link to={Routes.main.path} className={styles.button}>
+    <a href={Routes.main.path} className={styles.button}>
       GO BACK TO HOME
-    </Link>
+    </a>
   </div>
   );
 }

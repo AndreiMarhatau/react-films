@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import styles from './ModalWindow.scss';
+import styles from './ModalWindow.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ModalType from '../../../../utils/enums/ModalType';

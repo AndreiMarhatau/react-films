@@ -22,8 +22,7 @@ export const Routes = {
     path: '/film/:id',
     basePath: '/film/',
     exact: false,
-    render: () => <><MovieDetailsContainer/>
-    <MainContainer /></>,
+    render: () => <FilmRoute />,
   },
   search: {
     path: '/search/:query',

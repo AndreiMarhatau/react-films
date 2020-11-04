@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import styles from './SearchContainer.scss';
+import styles from './SearchContainer.module.scss';
 import NetFlixRoulette from '../../../shared/NetFlixRoulette/NetFlixRoulette';
 import AddMovieButton from '../../components/AddMovieButton/AddMovieButton';
 import SearchLabel from '../../components/SearchLabel/SearchLabel';

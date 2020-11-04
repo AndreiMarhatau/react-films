@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './SettingsCard.scss';
+import styles from './SettingsCard.module.scss';
 
 const SettingsCard = (props) => {
   return <div className={styles.settingsCard}>

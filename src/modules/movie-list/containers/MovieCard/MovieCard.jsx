@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './MovieCard.scss';
+import styles from './MovieCard.module.scss';
 import PropTypes from 'prop-types';
 import MovieSettings from '../MovieSettings/MovieSettings';
 import ModalType from '../../../../utils/enums/ModalType';
@@ -18,9 +18,9 @@ const MovieCard = (props) => {
   }
 
     return <div className={styles.container} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-        <Link to={`${Routes.details.basePath}${props.movie.id}`}>
+        <a href={`${Routes.details.basePath}${props.movie.id}`}>
           <PosterImg className={styles.img} src={props.movie.poster_path} alt={props.movie.title}/>
-        </Link>
+        </a>
         <div className={styles.nameYearWrapper}>
           <span className={styles.name}>{props.movie.title}</span>
           <span className={styles.year}>{props.movie.release_date}</span>
