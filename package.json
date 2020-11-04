@@ -13,9 +13,16 @@
     "build:prod": "del dist && cross-env NODE_ENV=development && webpack --mode=production --config webpack.prod.js",
     "build:dev:watch": "cross-env NODE_ENV=development && webpack --mode=development --config webpack.dev.js --watch"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    }
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@testing-library/react": "^11.0.4",
+    "babel-jest": "^26.5.2",
     "classnames": "^2.2.6",
     "formik": "^2.1.5",
     "next": "^10.0.0",
@@ -26,6 +33,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0"
   },

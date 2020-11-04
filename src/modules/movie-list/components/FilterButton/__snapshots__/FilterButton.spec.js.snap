@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterButton FilterButton shapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <a
+      class="button"
+      href=""
+    />
+  </div>
+</DocumentFragment>
+`;
