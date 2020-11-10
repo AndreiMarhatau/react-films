@@ -13,11 +13,11 @@ export default Object.freeze({
       name: 'Name0',
       tagline: 'Some tagline',
       genres: [
-        'Genre1','Genre2'
+        'Genre1', 'Genre2',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 2,
@@ -26,11 +26,11 @@ export default Object.freeze({
       name: 'Name1',
       tagline: 'Some tagline',
       genres: [
-        'Genre2','Genre3'
+        'Genre2', 'Genre3',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 3,
@@ -39,11 +39,11 @@ export default Object.freeze({
       name: 'Name2',
       tagline: 'Some tagline',
       genres: [
-        'Genre1'
+        'Genre1',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 4,
@@ -52,11 +52,11 @@ export default Object.freeze({
       name: 'Name3',
       tagline: 'Some tagline',
       genres: [
-        'Genre1','Genre2'
+        'Genre1', 'Genre2',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 5,
@@ -65,11 +65,11 @@ export default Object.freeze({
       name: 'Name4',
       tagline: 'Some tagline',
       genres: [
-        'Genre2','Genre3'
+        'Genre2', 'Genre3',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 6,
@@ -78,11 +78,11 @@ export default Object.freeze({
       name: 'Name5',
       tagline: 'Some tagline',
       genres: [
-        'Genre1'
+        'Genre1',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 7,
@@ -91,11 +91,11 @@ export default Object.freeze({
       name: 'Name6',
       tagline: 'Some tagline',
       genres: [
-        'Genre1','Genre2'
+        'Genre1', 'Genre2',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 8,
@@ -104,11 +104,11 @@ export default Object.freeze({
       name: 'Name7',
       tagline: 'Some tagline',
       genres: [
-        'Genre2','Genre3'
+        'Genre2', 'Genre3',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
     {
       id: 9,
@@ -117,11 +117,11 @@ export default Object.freeze({
       name: 'Name8',
       tagline: 'Some tagline',
       genres: [
-        'Genre1'
+        'Genre1',
       ],
       voteAverage: 5.5,
       runtime: 120,
-      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+      overview: "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.",
     },
   ],
 });

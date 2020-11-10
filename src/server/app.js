@@ -1,28 +1,27 @@
-//const React = require('react');
-//const ReactDOMServer = require('react-dom/server');
+// const React = require('react');
+// const ReactDOMServer = require('react-dom/server');
 
-
-/*const App = require('../App').default;
+/* const App = require('../App').default;
 const store = require('../store/store').default;
 const StaticRouter = require('react-router');
-const Page = require('../Page');*/
-import App from '../App';
-import store from '../store/store';
-import {StaticRouter} from 'react-router';
-import Page from '../Page';
+const Page = require('../Page'); */
+import { StaticRouter } from 'react-router';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import App from '../App';
+import store from '../store/store';
+import Page from '../Page';
 
 const appComponent = React.createElement(App, {
-  router: StaticRouter, store: store
+  router: StaticRouter, store,
 }, React.createElement(StaticRouter, null, React.createElement(Page, null, null)));
 
 module.exports = function render(initialState) {
-  // Model the initial state  
-  let content = renderToString(appComponent);
+  // Model the initial state
+  const content = renderToString(appComponent);
   return {
     content,
-    store
+    store,
   };
 };
 
@@ -44,8 +43,6 @@ module.exports = function render(initialState) {
 //     <div id="root">${html}</div>
 //   </body>
 // `;
-
-
 
 // const serverRenderer = () => {
 //   return (req, res) => {

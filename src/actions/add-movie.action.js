@@ -1,5 +1,5 @@
-const { createAction } = require("redux-actions");
-const { default: consts } = require("../constants/consts");
+const { createAction } = require('redux-actions');
+const { default: consts } = require('../constants/consts');
 
 export const addMovieAction = createAction('ADD_MOVIE');
 
@@ -8,10 +8,10 @@ export const addMovie = (data) => (dispatch) => {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
-      'Content-Type' : 'application/json',
-      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
     },
   })
-  .then(r => r.status)
-  .then(r => dispatch(addMovieAction(r)));
-}
+    .then((r) => r.status)
+    .then((r) => dispatch(addMovieAction(r)));
+};

@@ -5,7 +5,7 @@ import { Redirect, Route, Switch } from 'react-router';
 import { Routes } from './router/routes';
 import { useDispatch } from 'react-redux';
 import useMoviesUpdater from './utils/hooks/useMoviesUpdater';
-
+// PATTERN: React fragment
 const Page = () => {
   const dispatch = useDispatch();
   useMoviesUpdater(dispatch);

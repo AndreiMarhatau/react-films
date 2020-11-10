@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Arrow.module.scss';
 import classNames from 'classnames';
-
+// PATTERN: Conditional rendering
 const Arrow = props => {
     return (
             props.descending ? 

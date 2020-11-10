@@ -9,10 +9,10 @@ import movieDetailsSelector from '../../../../selectors/movie-details-page.selec
 import { setMovieDetails } from '../../../../actions/movie-details-page.action';
 import movieSelector from '../../../../selectors/movie.selector';
 import { useHistory, useParams } from 'react-router';
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 
 const MovieDetailsContainer = () => {
-  const { query } = useRouter();
+  const query = useParams();
   const movie = useSelector(movieDetailsSelector);
   const dispatch = useDispatch();
   const history = useHistory();
